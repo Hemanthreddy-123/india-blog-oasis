@@ -57,11 +57,11 @@ const Index = () => {
   ];
 
   const categories = [
-    { name: "Technology", count: 85, color: "bg-gradient-to-r from-purple-500 to-pink-500", icon: "💻", href: "/category/technology" },
-    { name: "Culture", count: 62, color: "bg-gradient-to-r from-blue-500 to-cyan-500", icon: "🎨", href: "/category/culture" },
-    { name: "Business", count: 48, color: "bg-gradient-to-r from-emerald-500 to-teal-500", icon: "💼", href: "/category/business" },
-    { name: "Travel", count: 34, color: "bg-gradient-to-r from-orange-500 to-red-500", icon: "✈️", href: "/category/travel" },
-    { name: "Health", count: 29, color: "bg-gradient-to-r from-green-500 to-emerald-500", icon: "🏥", href: "/category/health" }
+    { name: "Technology", count: 85, color: "bg-gradient-to-r from-slate-600 to-slate-800", icon: "💻", href: "/category/technology" },
+    { name: "Culture", count: 62, color: "bg-gradient-to-r from-blue-600 to-slate-700", icon: "🎨", href: "/category/culture" },
+    { name: "Business", count: 48, color: "bg-gradient-to-r from-green-600 to-slate-700", icon: "💼", href: "/category/business" },
+    { name: "Travel", count: 34, color: "bg-gradient-to-r from-orange-600 to-slate-700", icon: "✈️", href: "/category/travel" },
+    { name: "Health", count: 29, color: "bg-gradient-to-r from-emerald-600 to-slate-700", icon: "🏥", href: "/category/health" }
   ];
 
   const handleSearch = (e: React.FormEvent) => {
@@ -84,7 +84,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <Header />
       
       <HeroSection />
@@ -99,12 +99,12 @@ const Index = () => {
                 placeholder="Search articles, topics, authors, and more..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 h-14 text-lg border-2 border-purple-200 focus:border-purple-500 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg"
+                className="pl-12 h-14 text-lg border-2 border-slate-300 focus:border-slate-500 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg"
               />
             </div>
             <Button 
               type="submit"
-              className="h-14 px-8 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-2xl shadow-lg"
+              className="h-14 px-8 bg-gradient-to-r from-slate-800 to-slate-600 hover:from-slate-900 hover:to-slate-700 text-white rounded-2xl shadow-lg"
             >
               Search
             </Button>
@@ -118,12 +118,12 @@ const Index = () => {
       <section className="py-16 px-4 max-w-6xl mx-auto" id="featured-posts">
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">
               Trending Articles
             </h2>
             <p className="text-xl text-gray-600">Most popular stories this week</p>
           </div>
-          <div className="flex items-center gap-2 text-purple-600">
+          <div className="flex items-center gap-2 text-slate-700">
             <TrendingUp className="h-8 w-8" />
             <Star className="h-6 w-6 fill-current" />
           </div>
@@ -139,7 +139,7 @@ const Index = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                <Badge className="absolute top-4 left-4 bg-white/95 text-purple-600 font-semibold">
+                <Badge className="absolute top-4 left-4 bg-white/95 text-slate-800 font-semibold">
                   {post.category}
                 </Badge>
                 <div className="absolute top-4 right-4 flex items-center gap-1 bg-black/50 text-white px-2 py-1 rounded-full text-sm">
@@ -149,7 +149,7 @@ const Index = () => {
               </div>
               
               <CardHeader className="pb-3">
-                <CardTitle className="line-clamp-2 group-hover:text-purple-600 transition-colors text-xl leading-tight">
+                <CardTitle className="line-clamp-2 group-hover:text-slate-800 transition-colors text-xl leading-tight">
                   {post.title}
                 </CardTitle>
                 <CardDescription className="line-clamp-3 text-base text-gray-600">
@@ -160,7 +160,7 @@ const Index = () => {
               <CardContent className="pt-0">
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                    <div className="w-8 h-8 bg-gradient-to-r from-slate-600 to-slate-800 rounded-full flex items-center justify-center text-white text-xs font-bold">
                       {post.author.split(' ').map(n => n[0]).join('')}
                     </div>
                     <span className="font-medium">{post.author}</span>
@@ -180,7 +180,7 @@ const Index = () => {
                       <Heart className="h-4 w-4" />
                       <span>{post.likes}</span>
                     </button>
-                    <button className="flex items-center gap-2 hover:text-purple-500 transition-colors">
+                    <button className="flex items-center gap-2 hover:text-slate-700 transition-colors">
                       <MessageCircle className="h-4 w-4" />
                       <span>{post.comments}</span>
                     </button>
@@ -190,14 +190,14 @@ const Index = () => {
                       variant="ghost" 
                       size="sm" 
                       onClick={() => handleShare(post.id)}
-                      className="hover:bg-purple-50"
+                      className="hover:bg-slate-100"
                     >
                       <Share2 className="h-4 w-4" />
                     </Button>
                     <Button 
                       size="sm" 
                       onClick={() => handlePostClick(post.id)}
-                      className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+                      className="bg-gradient-to-r from-slate-800 to-slate-600 hover:from-slate-900 hover:to-slate-700 text-white"
                     >
                       Read More
                     </Button>
@@ -212,7 +212,7 @@ const Index = () => {
           <Button 
             size="lg" 
             onClick={() => console.log("Loading more trending posts")}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg shadow-lg"
+            className="bg-gradient-to-r from-slate-800 to-slate-600 hover:from-slate-900 hover:to-slate-700 text-white px-8 py-4 text-lg shadow-lg"
           >
             View All Trending Posts
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -224,7 +224,7 @@ const Index = () => {
 
       {/* Categories Grid with Working Buttons */}
       <section className="py-16 px-4 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-16">
+        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-16">
           Explore Categories
         </h2>
         
@@ -240,7 +240,7 @@ const Index = () => {
                   <div className={`w-20 h-20 ${category.color} rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <span className="text-3xl">{category.icon}</span>
                   </div>
-                  <h3 className="font-bold text-xl text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  <h3 className="font-bold text-xl text-gray-900 mb-3 group-hover:text-slate-800 transition-colors">
                     {category.name}
                   </h3>
                   <p className="text-gray-600 font-medium">
